@@ -5,4 +5,6 @@ Build any mods you can imagine with TerraModded. It's ease of use makes creating
 
 
 ![alt text](https://www.petrtech.ml/TerraModdedRes/logoUltra.png)
+<p style="float: right">
 TerraModded is a modding client made by 2 people in the Czech Republic. The project takes heavy inspiration from MCreator from Pylo. The project will not be open-sourced yet, maybe in the future?
+</p>

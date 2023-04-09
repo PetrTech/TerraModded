@@ -135,6 +135,7 @@ h2{
   cursor: pointer;
   float:right;
   margin-right: 20px;
+  line-height: 1.6;
   font-weight: 600;
   font-size: 15px;
   font-family: 'Outfit';
@@ -178,4 +179,12 @@ h4{
   display:inline-block;
   font-weight: 300;
   opacity: 50%;
+}
+
+/*ICONS*/
+.icon{
+  vertical-align:bottom; 
+  margin-right:3%; 
+  width: 25px; 
+  height: 25px;
 }

@@ -13,8 +13,7 @@ TerraModded is a modding client made by 1 teen from the Czech Republic. The proj
 <br/>
 <br/>
 <p align="right">
-As of August 2022 I have decided to rewrite this tool for more extensibility. This tool will now be an Open Source Terraria mod that is used to create mods in-game.
-I have decided to open-source this because mods that modify files are pretty shady unless open-sourced.
+As of April 9th 2023 I have decided to rewrite this tool. Again.
 </p>
 <br/>
 <br/>

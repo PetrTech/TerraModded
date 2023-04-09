@@ -11,32 +11,82 @@
     <script src="https://unpkg.com/feather-icons"></script>
 
     <div class="hamburgerMenu">
-        <button class="hamburgerButton"><i data-feather="grid" class="icon"></i> Projects</button>
-        <button class="hamburgerButton"><i data-feather="package" class="icon"></i> Packages</button>
+        <button class="hamburgerButton" id="home"><i data-feather="grid" class="icon"></i> Projects</button>
+        <button class="hamburgerButton" id="packages"><i data-feather="package" class="icon"></i> Packages</button>
         <button class="hamburgerButton"><i data-feather="tool" class="icon"></i> Settings</button>
         <button class="hamburgerButton"><i data-feather="book" class="icon"></i> About</button>
     </div>
     <div class='content'>
-        <h1>TerraModded v1.0.0d1</h1>
+        <div class="mainpage" id="projectswin">
+            <h1>TerraModded v1.0.0d1</h1>
 
-        <div class='projects'>
-          <h2 style="display:inline-block">Projects</h2>
-          <button style="display:inline-block"><i data-feather="file-plus" class="icon"></i> Create Project</button>
-          <div class='separator'>.</div>
-
-          <div class="projectsContent">
-            <div class='project'>
-                <h3 id="pname">Project Name</h3><p style="display:inline-block">|</p><h4 id="pdate">9/11/2001</h4>
-                <button><i data-feather="edit" class="icon"></i></button>
+            <div class='projects'>
+              <h2 style="display:inline-block">Projects</h2>
+              <button style="display:inline-block"><i data-feather="file-plus" class="icon"></i> Create Project</button>
+              <div class='separator'>.</div>
+    
+              <div class="projectsContent">
+                <div class='project'>
+                    <h3 id="pname">Project Name</h3><p style="display:inline-block">|</p><h4 id="pdate">xx/yy/zzzz</h4>
+                    <button><i data-feather="edit" class="icon"></i></button>
+                </div>
+              </div>
             </div>
-          </div>
-
         </div>
 
+        <div class="packages" id="packageswin">
+            <h1><i data-feather="package" class="iconbig"></i>Packages</h1>
+
+            <div class='projects'>
+                <h2 style="display:inline-block">Official Packages</h2>
+                <button style="display:inline-block; width: 44px; background-color: var(--buttonColorLevel1);" id="refreshPackages"><i data-feather="refresh-cw" class="icon"></i></button>
+                <div class='separator'>.</div>
+                <div class="projectsContent">
+                    <div class='project'>
+                        <h3 id="pname">Package Name</h3><p style="display:inline-block">|</p><h4 id="pdate">xx/yy/zzzz</h4><p style="display:inline-block">|</p><h4 id="psize">0.00mb</h4>
+                        <button style="width:200px;"><i data-feather="download" class="icon"></i> Add to project</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class='projects'>
+                <h2 style="display:inline-block">Endpoint 1 (com.terramoddedcommunity): Packages</h2>
+                <button style="display:inline-block;  width: 44px; background-color: var(--buttonColorLevel1);" id="refreshPackages"><i data-feather="refresh-cw" class="icon"></i></button>
+                <div class='separator'>.</div>
+                <div class="projectsContent">
+                    <div class='project'>
+                        <h3 id="pname">Package Name</h3><p style="display:inline-block">|</p><h4 id="pdate">xx/yy/zzzz</h4><p style="display:inline-block">|</p><h4 id="psize">0.00mb</h4>
+                        <button style="width:200px;"><i data-feather="download" class="icon"></i> Add to project</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
         feather.replace()
+
+        function delay(time) {
+            return new Promise(resolve => setTimeout(resolve, time));
+        }
+
+        function hideProjects(){
+            document.getElementById('projectswin').style.display = "none";
+        }
+
+        function hidePackages(){
+            document.getElementById('packageswin').style.display = "none";
+        }
+
+        document.getElementById("packages").addEventListener('click', function(){
+            document.getElementById('packageswin').style.display = "block";
+            hideProjects();
+        });
+
+        document.getElementById("home").addEventListener('click', function(){
+            document.getElementById('projectswin').style.display = "block";
+            hidePackages();
+        });
     </script>
 </body>
 </html>

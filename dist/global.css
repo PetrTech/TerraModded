@@ -43,6 +43,14 @@ body{
   padding:10px;
 }
 
+.mainpage{
+  display: block;
+}
+
+.packages{
+  display:none;
+}
+
 /*LEFT MENU*/
 
 .hamburgerMenu{
@@ -100,6 +108,7 @@ body{
   background-color: var(--backgroundLevel1);
   border-radius: 10px;
   padding-bottom: 2px;
+  margin-bottom: 10px;
 }
 
 .project{
@@ -177,6 +186,7 @@ h3{
 
 h4{
   display:inline-block;
+  margin-right: 10px;
   font-weight: 300;
   opacity: 50%;
 }
@@ -187,4 +197,33 @@ h4{
   margin-right:3%; 
   width: 25px; 
   height: 25px;
+}
+
+.iconbig{
+  vertical-align:middle; 
+  margin-right:10px; 
+  width: 35px; 
+  height: 35px;
+  margin-bottom: 6px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--backgroundLevel1);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--backgroundLevel2);
+  border-radius: 100px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--colorPrimary);
 }

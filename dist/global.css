@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+  --colorPrimary: #0085FF;
+}
+
+/*COLOR SCHEMES*/
+@media (prefers-color-scheme: dark) {
+  :root{
+    --backgroundColor: #0A0A0A;
+    --backgroundLevel1: #131313;
+    --backgroundLevel2: #1d1d1d;
+    --buttonColor: #1E1E1E;
+    --buttonColorLevel1: #272727;
+    --textColor: #eceff0;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root{
+    --backgroundColor: #ffffff;
+    --backgroundLevel1: #e7e7e7;
+    --backgroundLevel2: #ffffff;
+    --buttonColor: #ffffff;
+    --buttonColorLevel1: #f0f0f0;
+    --textColor: #000000;
+    --colorPrimary: #2bbcff;
+  }
+}
+
+body{
+  background: var(--backgroundColor);
+  color: var(--textColor);
+  font-family: 'Outfit';
+}
+
+.content{
+  position:absolute;
+  left:300px;
+  right:0;
+  top:0;
+  bottom:0;
+  padding:10px;
+}
+
+/*LEFT MENU*/
+
+.hamburgerMenu{
+  background: var(--backgroundLevel1);
+  position:fixed;
+  width:300px;
+  left:0;
+  top:0;
+  bottom:0;
+  animation: 1s ease-in-out 0s 1 slideInFromLeft;
+}
+
+.hamburgerButton{
+  font-family: 'Outfit';
+  font-weight: 600;
+  position:relative;
+  background: var(--buttonColor);
+  border: none;
+  color: var(--textColor);
+  width: 95%;
+  margin-left: 2.5%;
+  cursor:pointer;
+  font-size: 16px;
+  vertical-align: middle;
+  top:0;
+  bottom:0;
+  margin-top: 3%;
+  padding-top:6%;
+  line-height: 1.55;
+  user-select: none;
+  padding-bottom:6%;
+  border-radius: 5px;
+  text-align: left;
+  padding-left:6%;
+  transition: 0.15s;
+}
+
+.hamburgerButton:hover{
+  background: var(--buttonColorLevel1);
+  box-shadow: 0 0 0 1.75px var(--colorPrimary);;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+      transform: translateX(-100%);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+/* PROJECTS */
+
+.projects{
+  background-color: var(--backgroundLevel1);
+  border-radius: 10px;
+  padding-bottom: 2px;
+}
+
+.project{
+  background-color: var(--backgroundLevel2);
+  border-radius: 7px;
+  padding-left:20px;
+  height: 62.5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+h2{
+  margin-left: 13px;
+}
+
+.separator{
+  position:relative;
+  width: 100%;
+  background: var(--textColor);
+  font-size: 1.5px;
+  opacity: 10%;
+  margin-bottom: 20px;
+}
+
+.projects button{
+  background-color: var(--colorPrimary);
+  color: var(--textColor);
+  border: none;
+  border-radius: 5px;
+  padding:10px;
+  width: 200px;
+  cursor: pointer;
+  float:right;
+  margin-right: 20px;
+  font-weight: 600;
+  font-size: 15px;
+  font-family: 'Outfit';
+  margin-top: 15px;
+  transition: 0.3s;
+  box-shadow: 0 0 0 0px var(--colorPrimary);
+}
+
+.projects button:hover{
+  box-shadow: 0 0 0 3px var(--colorPrimary);
+}
+
+h3{
+  display:inline-block;
+  font-weight: 600;
+  margin-right: 20px;
+}
+
+.project p{
+  font-size: 18px;
+  opacity: 25%;
+  margin-right: 20px;
+}
+
+.project button{
+  background-color: var(--colorPrimary);
+  color: var(--textColor);
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding:10px;
+  width: 45px;
+  float:right;
+  font-family: 'Outfit';
+  margin-right: 10px;
+  line-height: 1.75;
+  margin-top: 9px;
+}
+
+h4{
+  display:inline-block;
+  font-weight: 300;
+  opacity: 50%;
+}

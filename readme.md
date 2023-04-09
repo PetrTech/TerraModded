@@ -22,7 +22,8 @@ As of April 9th 2023 I have decided to rewrite this tool. Again.
 <h1>Prerequisities</h1>
 <ul>
 <li>Visual Studio 2022 or JetBrains Rider (Visual Studio Preferred) (Only if you're going to do code edits though)</li>
-<li>.NET 6.0 SDK</li>
+<li>.NET 7.0 SDK</li>
+<li>.NET 7.0 RUNTIME</li>
 <li>Terraria (preferably on Steam)</li>
 <li>TModLoader</li>
 <li>Any program for texturing. Recommended programs are: Paint.NET, GIMP, PhotoPea (Online) and Photoshop</li>

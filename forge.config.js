@@ -1,5 +1,10 @@
 module.exports = {
-  packagerConfig: {},
+  packagerConfig: {
+    copyFiles: {
+      from: './bin',
+      to: './bin',
+    },
+  },
   rebuildConfig: {},
   makers: [
     {

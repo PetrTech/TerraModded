@@ -5,16 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="global.css">
+    <link rel="icon" type="image/x-icon" href="icon.ico">
     <title>TerraModded</title>
 </head>
 <body>
     <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
 
     <div class="hamburgerMenu">
         <button class="hamburgerButton" id="home"><i data-feather="grid" class="icon"></i> Projects</button>
         <button class="hamburgerButton" id="packages"><i data-feather="package" class="icon"></i> Packages</button>
-        <button class="hamburgerButton"><i data-feather="tool" class="icon"></i> Settings</button>
-        <button class="hamburgerButton"><i data-feather="book" class="icon"></i> About</button>
+        <button class="hamburgerButton" id="settingsbtn"><i data-feather="tool" class="icon"></i> Settings</button>
+        <button class="hamburgerButton" id="aboutbtn"><i data-feather="book" class="icon"></i> About</button>
     </div>
     <div class='content'>
         <div class="mainpage" id="projectswin">
@@ -61,6 +64,18 @@
                 </div>
             </div>
         </div>
+        
+        <div class="settings" id="settingswin">
+            <h1><i data-feather="tool" class="iconbig"></i>Settings</h1>
+            <h3>Nothing to see here, yet. Come back later!</h3>
+        </div>
+
+        <div class="about" id="aboutwin">
+            <h1><i data-feather="book" class="iconbig"></i>About</h1>
+            <h3>This section is being automatically updated. This pulls the markdown file from the github repository.</h3>
+            <div class='separator'>.</div>
+            <zero-md src="https://raw.githubusercontent.com/PetrTech/TerraModded/master/readme.md" style="color:white; background:white; width:97.6%; position:absolute; left:0; right:0; padding:10px;"></zero-md>
+        </div>
     </div>
 
     <script>
@@ -78,15 +93,41 @@
             document.getElementById('packageswin').style.display = "none";
         }
 
+        function hideAbout(){
+            document.getElementById('aboutwin').style.display = "none";
+        }
+
+        function hideSettings(){
+            document.getElementById('settingswin').style.display = "none";
+        }
+
         document.getElementById("packages").addEventListener('click', function(){
             document.getElementById('packageswin').style.display = "block";
             hideProjects();
+            hideAbout();
+            hideSettings();
         });
 
         document.getElementById("home").addEventListener('click', function(){
             document.getElementById('projectswin').style.display = "block";
             hidePackages();
+            hideAbout();
+            hideSettings();
         });
+
+        document.getElementById("aboutbtn").addEventListener('click', function(){
+            document.getElementById('aboutwin').style.display = "block";
+            hidePackages();
+            hideProjects();
+            hideSettings();
+        })
+
+        document.getElementById("settingsbtn").addEventListener('click', function(){
+            document.getElementById('settingswin').style.display = "block";
+            hidePackages();
+            hideProjects();
+            hideAbout();
+        })
     </script>
 </body>
 </html>

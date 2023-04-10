@@ -47,6 +47,14 @@ body{
   display: block;
 }
 
+.about{
+  display:none;
+}
+
+.settings{
+  display:none;
+}
+
 .packages{
   display:none;
 }
